@@ -2,7 +2,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { FaEnvelope, FaLock } from "react-icons/fa";
 import { Link, useNavigate } from "react-router-dom";
-import axios from "axios";
+import API from "../../api"
 export default function Login() {
   const [form, setForm] = useState({ email: "", phone:"", password: "" });
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -29,7 +29,7 @@ const handleSubmit = async (e) => {
   }
 
   try {
-    const response = await axios.post('http://localhost:5000/api/login', form, 
+    const response = await API.post('/login', form, 
       { headers: {
     'Content-Type': 'application/json'
   }}

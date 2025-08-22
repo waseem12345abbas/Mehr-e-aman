@@ -2,7 +2,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { FaUser, FaEnvelope, FaLock, FaAddressBook, FaMobile } from "react-icons/fa";
 import { Link, useNavigate } from "react-router-dom";
-import axios from 'axios'
+import API from "../../api";
 
 export default function Registration() {
   const [form, setForm] = useState({ name: "", email: "", phone:"", address:"", password: "" });
@@ -20,7 +20,7 @@ export default function Registration() {
     setIsSubmitting(true)
     setMessage({type:"", text:""})
     try {
-      const response= await axios.post('http://localhost:5000/api/save_user', form)
+      const response= await API.post('/save_user', form)
       console.log(response)
       setMessage({type:"success", text:"Account created successfully!"})
       // navigate to sign up page
