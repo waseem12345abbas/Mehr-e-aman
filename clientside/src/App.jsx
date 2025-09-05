@@ -2,7 +2,6 @@ import { Routes, Route } from "react-router-dom";
 import RegisterPage from "./pages/auth/Register";
 import LoginPage from './pages/auth/Login';
 import ForgetPassword from './pages/auth/ForgetPassword'
-import HomePage from "./pages/Home";
 import "./App.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
@@ -17,6 +16,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer } from 'react-toastify';
 import Features from "./pages/Features";
 import Saved from "./pages/Saved";
+import Home from "./pages/Home/Home";
 
 
 function App() {
@@ -26,7 +26,7 @@ function App() {
     <Navbar/>
       <Routes>
         <Route path="/login" element={<LoginPage />} />
-        <Route path="/" element={<HomePage />} />
+        <Route path="/" element={<Home />} />
         <Route path="/register" element={<RegisterPage />} />
         <Route path="/forgetpassword" element={<ForgetPassword />} />
         <Route path="/privay-policy" element={<PrivacyPolicy/>}/>

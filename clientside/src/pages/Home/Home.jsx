@@ -5,7 +5,7 @@ import SafetyStatus from '../../components/home/SafetyStatus'
 import LiveMap from '../../components/home/LiveMap'
 import HelplineShortcuts from '../../components/home/HelplineShortcuts'
 import SafetyTips from '../../components/home/SafetyTips'
-const HomePage = () => {
+const Home = () => {
   return (
     <div className='my-16'>
       <HeroSOS/>
@@ -18,4 +18,4 @@ const HomePage = () => {
   )
 }
 
-export default HomePage
+export default Home
