@@ -14,7 +14,7 @@ const app=express()
 app.use(bodyParser.json())
 // cors middleware that will handle differet cors origin
 app.use(cors({
-  origin: 'http://localhost:5173', // Your frontend URL
+  origin: 'https://mehr-e-aman.vercel.app', // Your frontend URL
   credentials: true,
   exposedHeaders: ['Authorization'] 
 }))
